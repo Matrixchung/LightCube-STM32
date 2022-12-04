@@ -1,0 +1,15 @@
+../User_Drivers/WS2812/animation.c:12:6:LED_BreatheOnePixel	40	static
+../User_Drivers/WS2812/animation.c:35:6:LED_BreatheBatch	48	static
+../User_Drivers/WS2812/animation.c:68:6:LED_GradientOnePixel	40	static
+../User_Drivers/WS2812/animation.c:79:6:LED_GradientBatch	40	static
+../User_Drivers/WS2812/animation.c:97:6:LED_Anim_GradientLayer	56	static
+../User_Drivers/WS2812/animation.c:156:6:LED_Anim_FlashLayer	40	static
+../User_Drivers/WS2812/animation.c:193:6:LED_Anim_Heart	40	static
+../User_Drivers/WS2812/animation.c:209:6:LED_Anim_Rain	48	static
+../User_Drivers/WS2812/animation.c:224:6:LED_Anim_CycleOnOff	16	static
+../User_Drivers/WS2812/animation.c:234:6:LED_Anim_RainbowWave	72	static
+../User_Drivers/WS2812/animation.c:257:6:LED_Anim_Snake	40	static
+../User_Drivers/WS2812/animation.c:309:6:LED_Anim_RainbowSpin	16	static
+../User_Drivers/WS2812/animation.c:317:6:LED_Anim_MusicWave	16	static
+../User_Drivers/WS2812/animation.c:322:6:LED_Anim_Countdown	48	static
+../User_Drivers/WS2812/animation.c:342:6:LED_Anim_ShowNumber	32	static

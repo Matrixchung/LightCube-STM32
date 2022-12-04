@@ -1,0 +1,2 @@
+../User_Drivers/Delay/delay.c:8:6:delay_us	24	static,ignoring_inline_asm
+../User_Drivers/Delay/delay.c:12:6:delay_ms	16	static

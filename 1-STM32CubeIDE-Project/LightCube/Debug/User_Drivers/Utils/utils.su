@@ -1,0 +1,5 @@
+../User_Drivers/Utils/utils.c:10:6:splitData	32	static
+../User_Drivers/Utils/utils.c:27:6:rgb_to_hsv	40	static
+../User_Drivers/Utils/utils.c:42:6:hsv_to_rgb	72	static
+../User_Drivers/Utils/utils.c:74:6:swap_u8	24	static
+../User_Drivers/Utils/utils.c:79:6:swap_u16	24	static

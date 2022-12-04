@@ -1,0 +1,7 @@
+../User_Drivers/USART/retarget.c:23:6:UART_RetargetInit	16	static
+../User_Drivers/USART/retarget.c:29:5:_isatty	16	static
+../User_Drivers/USART/retarget.c:35:5:_write	32	static
+../User_Drivers/USART/retarget.c:48:5:_close	16	static
+../User_Drivers/USART/retarget.c:54:5:_lseek	24	static
+../User_Drivers/USART/retarget.c:61:5:_read	32	static
+../User_Drivers/USART/retarget.c:73:5:_fstat	16	static

@@ -1,0 +1,12 @@
+../User_Drivers/WS2812/ws2812.c:23:6:_setDmaBuf32	24	static
+../User_Drivers/WS2812/ws2812.c:31:6:LED_Update	32	static
+../User_Drivers/WS2812/ws2812.c:78:6:LED_UpdatePlane	40	static
+../User_Drivers/WS2812/ws2812.c:123:6:LED_SetColor	24	static
+../User_Drivers/WS2812/ws2812.c:177:6:LED_ResetYZ	16	static
+../User_Drivers/WS2812/ws2812.c:196:6:LED_DrawBitmap	40	static
+../User_Drivers/WS2812/ws2812.c:226:6:LED_SetColorBatch	40	static
+../User_Drivers/WS2812/ws2812.c:234:6:LED_ResetXZ	32	static
+../User_Drivers/WS2812/ws2812.c:242:6:LED_ResetXY	32	static
+../User_Drivers/WS2812/ws2812.c:249:6:LED_SetBrightness	16	static
+../User_Drivers/WS2812/ws2812.c:253:6:LED_ResetAll	8	static
+../User_Drivers/WS2812/ws2812.c:260:6:LED_SetColorAll	40	static
