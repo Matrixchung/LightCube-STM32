@@ -1,0 +1,22 @@
+w [pwmDuty]                - set pwm output duty, leave empty for pwm wave
+c <x> <y> <z> [brightness] - set single pixel's color, with brightness optional
+c <x> <y> <z> <r> <g> <b>  - set single pixel's rgb color
+r                          - reset all leds
+a <r> <g> <b>              - set all leds' rgb color
+b <x> <y> <z> [Hue] [Sat] [times] 
+b <x1> <y1> <z1> <x2> <y2> <z2> <Hue> <Sat> <times>
+g <x> <y> <z>              - gradient one pixel
+g <x1> <y1> <z1> <x2> <y2> <z2> - gradient from x1,y1,z1 to x2,y2,z2
+n <number> <face> <layer>  - presenting number at specified face and layer
+W A S D Q E                - move front/left/back/right/up/down dot
+p <anim> [times:5]         - presenting animation for x times
+
+------- Animations -------
+#1 Gradient Layers
+#2 Flash Layers
+#3 Animated Heart
+#4 Animated Rain
+#5 Cycle on/off
+#6 Animated Rainbow Wave
+#7 Animated Countdown
+#8 Animated Snake

@@ -71,6 +71,13 @@ void hsv_to_rgb(uint16_t h, uint16_t s, uint16_t v, uint8_t *r, uint8_t *g, uint
     *g = (uint8_t)(G*255);
     *b = (uint8_t)(B*255);
 }
+void getRGBWithBrightness(uint8_t r, uint8_t g, uint8_t b, uint8_t bright, uint8_t *resR, uint8_t *resG, uint8_t *resB){
+	if(bright>100) bright = 100;
+	uint16_t h, s, v;
+	rgb_to_hsv(r,g,b,&h,&s,&v);
+	v = (uint16_t)((float)v*(float)bright/100.0);
+	hsv_to_rgb(h,s,v,resR,resG,resB);
+}
 void swap_u8(uint8_t *a, uint8_t *b){
 	uint8_t temp = *a;
 	*a = *b;
@@ -80,4 +87,9 @@ void swap_u16(uint16_t *a, uint16_t *b){
 	uint16_t temp = *a;
 	*a = *b;
 	*b = temp;
+}
+
+uint8_t getRandomNumber(uint8_t start, uint8_t end, uint8_t seedModifier){
+	srand(HAL_GetTick()+seedModifier);
+	return (rand()%(end-start+1))+start;
 }

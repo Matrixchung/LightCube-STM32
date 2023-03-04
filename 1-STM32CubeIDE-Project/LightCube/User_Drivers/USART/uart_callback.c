@@ -78,20 +78,22 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 	// 模拟回车换行: 0D0A
 	else if(huart == &huart6){
 		if((USART6_RX_STA&0x8000)==0){ // 接收未完成
-			if(USART6_RX_STA&0x4000){ // 已经收到 0x0d (代表回车'\r')
-//				if(USART6_NewData!=0x0a) UART6_Clear(); // 接收错误, 重新开始
-//				else{
-//					// 再收到 0x0a (代表换行'\n')
-//					USART6_RX_STA |= 0x8000; // 接收完成, 加上0x8000标志位
-//				}
-				USART6_RX_STA |= 0x8000; // 接收完成, 加上0x8000标志位
+			if(USART6_RX_STA&0x4000){ // 已经收到 ';'
+				if(USART6_NewData!='\n') UART6_Clear(); // 接收错误, 重新开始
+				else{
+					// 再收到 0x0a (代表换行'\n')
+					USART6_RX_STA |= 0x8000; // 接收完成, 加上0x8000标志位
+				}
+//				USART6_RX_STA |= 0x8000; // 接收完成, 加上0x8000标志位
 			}
 			else{ // 还未收到 0x0d
-				if(USART6_NewData==';') USART6_RX_STA |= 0x4000; // 新收到 0x0d, 加上 0x0d 标志位
+				if(USART6_NewData==';') USART6_RX_STA |= 0x4000; // 新收到 ';', 加上标志位
 				else{
-					USART6_RX_BUF[USART6_RX_STA&0x3FFF] = USART6_NewData; // 收到的数据放入数组
-					USART6_RX_STA++; // 数组长度标志位 +1
-					if(USART6_RX_STA>(USART6_REC_LEN-1)) UART6_Clear(); // 超出缓存区容量, 重新开始接收
+					if(USART6_NewData >= ' ' && USART6_NewData <= 'z'){
+						USART6_RX_BUF[USART6_RX_STA&0x3FFF] = USART6_NewData; // 收到的数据放入数组
+						USART6_RX_STA++; // 数组长度标志位 +1
+						if(USART6_RX_STA>(USART6_REC_LEN-1)) UART6_Clear(); // 超出缓存区容量, 重新开始接收
+					}
 				}
 			}
 		}

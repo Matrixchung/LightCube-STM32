@@ -208,6 +208,11 @@ void SysTick_Handler(void)
 	  timer15_count = 0;
 	  timer15 = 1;
   }else timer15_count++;
+
+  if(timer5_count == 4){
+	  timer5_count = 0;
+	  timer5 = 1;
+  }else timer5_count++;
   /* USER CODE END SysTick_IRQn 1 */
 }
 

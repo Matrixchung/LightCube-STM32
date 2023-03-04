@@ -50,6 +50,8 @@ extern uint8_t timer60_count;
 extern uint8_t timer60;
 extern uint8_t timer15_count;
 extern uint8_t timer15;
+extern uint8_t timer5_count;
+extern uint8_t timer5;
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -60,6 +62,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LED_BUILTIN_Pin GPIO_PIN_13
+#define LED_BUILTIN_GPIO_Port GPIOC
 #define OLED_SDA_Pin GPIO_PIN_0
 #define OLED_SDA_GPIO_Port GPIOA
 #define OLED_SCL_Pin GPIO_PIN_1
@@ -67,6 +71,7 @@ void Error_Handler(void);
 #define BT_STATE_Pin GPIO_PIN_10
 #define BT_STATE_GPIO_Port GPIOA
 #define BT_STATE_EXTI_IRQn EXTI15_10_IRQn
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
